@@ -2,8 +2,8 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import fitnessImg from "@/public/fitness.jpg";
-import discordImg from "@/public/discord.png";
+import fitnessImg from "@/public/fitness.png";
+import discordImg from "@/public/discord-app.png";
 import pokemonImg from "@/public/pokemon.png";
 
 export const links = [
@@ -73,5 +73,6 @@ export const skillsData = [
   "Express",
   "MySQL",
   "Python",
+  "AWS",
   "Framer Motion",
 ] as const;

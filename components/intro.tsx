@@ -8,18 +8,10 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useInView } from "react-intersection-observer";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
-  const { ref, inView } = useInView({
-    threshold: 0.7,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("Home");
 
   return (
     <section
@@ -68,7 +60,7 @@ export default function Intro() {
         Hi, I'm <span className="font-bold">Neel</span>!{" "}
         <div className="flex-col">
           <span className="font-bold">Student</span>,{" "}
-          <span className="font-bold">Teacher</span>,{" "}
+          <span className="font-bold">Developer</span>,{" "}
           <span className="font-bold">Traveller</span>
         </div>
       </motion.h1>
